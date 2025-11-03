@@ -1,26 +1,41 @@
-# Sim Game - Optimal Strategy (DSC 395T Assignment)
+# Sim Game Optimal Strategy
 
-This project implements the **Game of Sim**, a two-player graph-based game where players alternately color edges and aim to avoid forming a triangle of their own color. The goal is to implement the **optimal winning strategy** for the second player.
+This project implements the optimal strategy for the 2-player Game of Sim, as assigned in the DSC 395T Algorithms and Data Structures course.
 
-## Files
-- `sim_board.py` — Manages the game board using an adjacency matrix.
-- `player2.py` — Implements the optimal strategy for Player 2.
-- `tests/` — Contains unit tests using **pytest**.
+## Table of Contents
 
-## How to Run
-```bash
-python sim_board.py
-pytest
-Rules Summary
-6 nodes, all connected (complete graph).
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Implementation Details](#implementation-details)
+- [File Structure](#file-structure)
+- [License](#license)
+- [Credits](#credits)
 
-Player 1: Red, Player 2: Blue.
+## About the Project
 
-First to complete a triangle of their own color loses.
+Sim is a pen-and-paper game for two players, played on a graph of 6 nodes where each player colors edges in turns. The goal is to avoid forming a triangle with all edges of one’s own color, and research shows the second player can always force a win with the correct moves[attached_file:1].
 
-Player 2 uses a deterministic winning strategy based on allowed and maximal allowed sets.
+This repository provides:
+- A full board management system.
+- An agent guaranteeing the second player's win via optimal strategy.
 
-Requirements
-Python 3.10+
+## Features
 
-pytest (for testing)
+- Board state managed by adjacency matrix
+- Comprehensive assistant bot for the second player (blue)
+- Functions to extract allowed moves, maximal sets, and miniboards
+- Strict adherence to mathematically optimal play
+
+## Getting Started
+
+### Prerequisites
+
+You will need:
+- Python (only standard library required)
+- Pytest (for running tests)
+
+### Installation
+
+Clone the repository:
